@@ -38,9 +38,7 @@ struct SwiceDocument: FileDocument,Equatable {
         }
         
         projectfile = try JSONDecoder().decode(ProjectFileModel.self, from: string.data(using: .utf8)!)
-        projectfile.electricalComponents.forEach{i in
-            print(i.position)
-        }
+        
        
     }
     func snapshot(contentType: UTType) throws -> ProjectFileModel {

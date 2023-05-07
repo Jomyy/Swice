@@ -44,20 +44,9 @@ struct InteractiveCanvas: View {
                         scrollView.verticalScrollElasticity = NSScrollView.Elasticity.none
                         scrollView.horizontalScrollElasticity = NSScrollView.Elasticity.none
                         
-                        /*scrollView.allowsMagnification = true
-                        if(wholeSize.size.width > wholeSize.size.height){
-                            if(700 / wholeSize.size.height <= 4){
-                                scrollView.minMagnification = 700 / wholeSize.size.height
-                            }
-                           
-                        }else{
-                            if(700 / wholeSize.size.width <= 4){
-                                scrollView.minMagnification = 700 / wholeSize.size.width
-                            }
-                           
-                        }
+                        
                        
-                        */
+                        
                        
                         scrollView.usesPredominantAxisScrolling = false
                     }.frame(width:wholeSize.size.width,height:wholeSize.size.height)
