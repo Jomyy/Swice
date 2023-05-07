@@ -9,19 +9,26 @@ import SwiftUI
 import UniformTypeIdentifiers
 
 extension UTType {
-    static var exampleText: UTType {
-        UTType(importedAs: "com.example.plain-text")
+    static var swiceCircuit: UTType {
+        UTType(importedAs: "com.jonny.swice-circuit")
     }
 }
 
-struct SwiceDocument: FileDocument {
-    var text: String
-
-    init(text: String = "Hello, world!") {
-        self.text = text
+struct SwiceDocument: FileDocument,Equatable {
+    static func == (lhs: SwiceDocument, rhs: SwiceDocument) -> Bool {
+        return false
+    }
+    
+    
+    var projectfile: ProjectFileModel
+ 
+    init(projectfile: ProjectFileModel){
+        self.projectfile = projectfile
+      
+        
     }
 
-    static var readableContentTypes: [UTType] { [.exampleText] }
+    static var readableContentTypes: [UTType] { [.swiceCircuit] }
 
     init(configuration: ReadConfiguration) throws {
         guard let data = configuration.file.regularFileContents,
@@ -29,11 +36,20 @@ struct SwiceDocument: FileDocument {
         else {
             throw CocoaError(.fileReadCorruptFile)
         }
-        text = string
+        
+        projectfile = try JSONDecoder().decode(ProjectFileModel.self, from: string.data(using: .utf8)!)
+        projectfile.electricalComponents.forEach{i in
+            print(i.position)
+        }
+       
     }
-    
+    func snapshot(contentType: UTType) throws -> ProjectFileModel {
+        projectfile// Make a copy.
+    }
     func fileWrapper(configuration: WriteConfiguration) throws -> FileWrapper {
-        let data = text.data(using: .utf8)!
+        let encoder = JSONEncoder()
+        let data = try encoder.encode(projectfile)
+        
         return .init(regularFileWithContents: data)
     }
 }

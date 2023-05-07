@@ -8,15 +8,12 @@
 import SwiftUI
 
 struct ContentView: View {
-    @Binding var document: SwiceDocument
+    @Binding var projectFile: ProjectFileModel
 
+   
     var body: some View {
-        TextEditor(text: $document.text)
+        EditorView(projectFile:$projectFile).frame(maxWidth:.infinity,maxHeight: .infinity)
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView(document: .constant(SwiceDocument()))
-    }
-}
+

@@ -15,6 +15,14 @@
 		FB002FB829FFF0EE0002AA91 /* SwiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002FB729FFF0EE0002AA91 /* SwiceTests.swift */; };
 		FB002FC229FFF0EE0002AA91 /* SwiceUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002FC129FFF0EE0002AA91 /* SwiceUITests.swift */; };
 		FB002FC429FFF0EE0002AA91 /* SwiceUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002FC329FFF0EE0002AA91 /* SwiceUITestsLaunchTests.swift */; };
+		FB002FD229FFF11C0002AA91 /* EditorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002FD129FFF11C0002AA91 /* EditorView.swift */; };
+		FB002FD529FFF1360002AA91 /* InteractiveCanvas.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002FD429FFF1360002AA91 /* InteractiveCanvas.swift */; };
+		FB002FD829FFF54B0002AA91 /* Introspect in Frameworks */ = {isa = PBXBuildFile; productRef = FB002FD729FFF54B0002AA91 /* Introspect */; };
+		FB002FDB29FFFF830002AA91 /* ProjectFileModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002FDA29FFFF830002AA91 /* ProjectFileModel.swift */; };
+		FB002FDD29FFFFB20002AA91 /* ElectricalComponentModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002FDC29FFFFB20002AA91 /* ElectricalComponentModel.swift */; };
+		FB002FDF2A0007050002AA91 /* ElectricalComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002FDE2A0007050002AA91 /* ElectricalComponentView.swift */; };
+		FB002FE12A001B320002AA91 /* PropertyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002FE02A001B320002AA91 /* PropertyView.swift */; };
+		FB002FE92A0039280002AA91 /* AddComponentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB002FE82A0039280002AA91 /* AddComponentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -48,6 +56,13 @@
 		FB002FBD29FFF0EE0002AA91 /* SwiceUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiceUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FB002FC129FFF0EE0002AA91 /* SwiceUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiceUITests.swift; sourceTree = "<group>"; };
 		FB002FC329FFF0EE0002AA91 /* SwiceUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiceUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		FB002FD129FFF11C0002AA91 /* EditorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditorView.swift; sourceTree = "<group>"; };
+		FB002FD429FFF1360002AA91 /* InteractiveCanvas.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InteractiveCanvas.swift; sourceTree = "<group>"; };
+		FB002FDA29FFFF830002AA91 /* ProjectFileModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectFileModel.swift; sourceTree = "<group>"; };
+		FB002FDC29FFFFB20002AA91 /* ElectricalComponentModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalComponentModel.swift; sourceTree = "<group>"; };
+		FB002FDE2A0007050002AA91 /* ElectricalComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElectricalComponentView.swift; sourceTree = "<group>"; };
+		FB002FE02A001B320002AA91 /* PropertyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PropertyView.swift; sourceTree = "<group>"; };
+		FB002FE82A0039280002AA91 /* AddComponentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddComponentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FB002FD829FFF54B0002AA91 /* Introspect in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +114,9 @@
 		FB002FA129FFF0EC0002AA91 /* Swice */ = {
 			isa = PBXGroup;
 			children = (
+				FB002FD929FFFF420002AA91 /* Models */,
+				FB002FD329FFF1230002AA91 /* Components */,
+				FB002FD029FFF1020002AA91 /* Views */,
 				FB002FA229FFF0EC0002AA91 /* SwiceApp.swift */,
 				FB002FA429FFF0EC0002AA91 /* SwiceDocument.swift */,
 				FB002FA629FFF0EC0002AA91 /* ContentView.swift */,
@@ -134,6 +153,34 @@
 			path = SwiceUITests;
 			sourceTree = "<group>";
 		};
+		FB002FD029FFF1020002AA91 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FB002FD129FFF11C0002AA91 /* EditorView.swift */,
+				FB002FE02A001B320002AA91 /* PropertyView.swift */,
+				FB002FE82A0039280002AA91 /* AddComponentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FB002FD329FFF1230002AA91 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				FB002FDE2A0007050002AA91 /* ElectricalComponentView.swift */,
+				FB002FD429FFF1360002AA91 /* InteractiveCanvas.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		FB002FD929FFFF420002AA91 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				FB002FDA29FFFF830002AA91 /* ProjectFileModel.swift */,
+				FB002FDC29FFFFB20002AA91 /* ElectricalComponentModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -150,6 +197,9 @@
 			dependencies = (
 			);
 			name = Swice;
+			packageProductDependencies = (
+				FB002FD729FFF54B0002AA91 /* Introspect */,
+			);
 			productName = Swice;
 			productReference = FB002F9F29FFF0EC0002AA91 /* Swice.app */;
 			productType = "com.apple.product-type.application";
@@ -222,6 +272,9 @@
 				Base,
 			);
 			mainGroup = FB002F9629FFF0EC0002AA91;
+			packageReferences = (
+				FB002FD629FFF54B0002AA91 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */,
+			);
 			productRefGroup = FB002FA029FFF0EC0002AA91 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -265,8 +318,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				FB002FA529FFF0EC0002AA91 /* SwiceDocument.swift in Sources */,
+				FB002FD229FFF11C0002AA91 /* EditorView.swift in Sources */,
 				FB002FA329FFF0EC0002AA91 /* SwiceApp.swift in Sources */,
+				FB002FE92A0039280002AA91 /* AddComponentView.swift in Sources */,
+				FB002FE12A001B320002AA91 /* PropertyView.swift in Sources */,
+				FB002FDB29FFFF830002AA91 /* ProjectFileModel.swift in Sources */,
+				FB002FD529FFF1360002AA91 /* InteractiveCanvas.swift in Sources */,
 				FB002FA729FFF0EC0002AA91 /* ContentView.swift in Sources */,
+				FB002FDF2A0007050002AA91 /* ElectricalComponentView.swift in Sources */,
+				FB002FDD29FFFFB20002AA91 /* ElectricalComponentModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -584,6 +644,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		FB002FD629FFF54B0002AA91 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUI-Introspect.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.2.3;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		FB002FD729FFF54B0002AA91 /* Introspect */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = FB002FD629FFF54B0002AA91 /* XCRemoteSwiftPackageReference "SwiftUI-Introspect" */;
+			productName = Introspect;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = FB002F9729FFF0EC0002AA91 /* Project object */;
 }
